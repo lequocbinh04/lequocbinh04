@@ -25,11 +25,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Move generated SVG
-        run: |
-          mv ./profile-3d-contrib/profile-3d.svg ./profile-3d.svg
-          rm -rf ./profile-3d-contrib
-
       - name: Commit and Push
         run: |
           git config user.name 'github-actions[bot]'
